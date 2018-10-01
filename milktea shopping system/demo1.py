@@ -6,24 +6,14 @@ print("欢迎光临小象奶茶店，本店销售以下品种的奶茶：\n"
         "①原味奶茶    ￥3  ②香蕉冰奶茶    ￥5  "
         "③草莓冰奶茶    ￥5\n④蒟蒻冰奶茶  ￥7  "
         "⑤珍珠冰奶茶    ￥7")
+def naicha(i):
+    nc_list[i][2] = int(input("请输入您所需要的数量："))
+    nc_list[i][3] = nc_list[i][2]*nc_list[i][1]
+
 while alter_num == "y":
     num_guest = int(input("请输入1-5来选择您所需要的奶茶："))
     if num_guest == 1 or num_guest == 2 or num_guest == 3 or num_guest == 4 or num_guest == 5:
-        if num_guest == 1:
-            nc_list[0][2] = int(input("请输入您所需要的数量："))
-            nc_list[0][3] = nc_list[0][2]*nc_list[0][1]
-        if num_guest == 2:
-            nc_list[1][2] = int(input("请输入您所需要的数量："))
-            nc_list[1][3] = nc_list[1][2]*nc_list[1][1]
-        if num_guest == 3:
-            nc_list[2][2] = int(input("请输入您所需要的数量："))
-            nc_list[2][3] = nc_list[2][2] * nc_list[2][1]
-        if num_guest == 4:
-            nc_list[3][2] = int(input("请输入您所需要的数量："))
-            nc_list[3][3] = nc_list[3][2]*nc_list[3][1]
-        if num_guest == 5:
-            nc_list[4][2] = int(input("请输入您所需要的数量："))
-            nc_list[4][3] = nc_list[4][2]*nc_list[4][1]
+        naicha(num_guest-1)
     else:
         print("Woops! 我们只售卖以上五种奶茶哦!新口味敬请期待!")
     alter_num = input("您想继续选购吗?想的话请输入Y，不想的话请输入N：")
