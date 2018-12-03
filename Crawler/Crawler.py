@@ -27,10 +27,12 @@ class getURLdetails():
             good_geturl.encoding = "utf-8"
             soup_good = BeautifulSoup(good_geturl.text,"lxml")
             SaleTicket = soup_good.find("a", class_="title")
-            tmp = re.search("https://uland.taobao.com/coupon/edetail\?e=.*?\"", str(SaleTicket))
-            tmp = tmp.group()
+            tmp = re.search("https://uland.taobao.com/coupon/edetail.*?\"", str(SaleTicket))
+            print(tmp)
             if tmp == None:
                 tmp = re.search("https://s.click.taobao.com/.*?\"",str(SaleTicket))
+            
+            tmp = tmp.group()
             tmp1 = tmp[:-1]
             URLData = TranslateDWZ(tmp1)
             if URLData != 1:
