@@ -4,4 +4,4 @@
 ### 目标
 ![Image text](https://github.com/MOC99/Python-Exercises/raw/master/img-folder/examp1.png)
 
-获取但页面上的原价与优惠后的价格以及优惠卷的网址
+获取页面上的原价与优惠后的价格以及优惠卷的网址
